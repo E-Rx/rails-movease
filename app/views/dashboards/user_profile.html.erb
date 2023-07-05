@@ -5,13 +5,13 @@
 
 
       <div>
-        <h2>"My Personal Information"</h2>
+        <h2>My Personal Information</h2>
           <%= link_to 'Edit my profile', edit_user_registration_path %> |
           <%= link_to 'Delete my account', user_registration_path, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
           <br>
       </div>
 
-      ***********************************************************************
+
 
 
   <h2>My vehicules</h2>
@@ -45,13 +45,13 @@
             <% end %>
           </div>
     </div>
-          <%= link_to 'Modifier', edit_vehicule_path(vehicule) %> |
-          <%= link_to 'Supprimer', vehicule_path(vehicule), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          <%= link_to 'Edit', edit_vehicule_path(vehicule) %> |
+          <%= link_to 'Delete', vehicule_path(vehicule), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
         <% end %>
 
 
 
-***********************************************************************
+
 
       <div>
      <h2>My Current Reservations</h2>
@@ -70,8 +70,8 @@
     <td><%= reservation.vehicule.name %></td>
     <% if current_user.id == reservation.vehicule.user_id %>
     <div class="links">
-      <%= link_to "Accepter", accept_reservation_path(reservation), data: {turbo_method: :post, turbo_confirm: 'Êtes-vous sûr?'} %>
-      <%= link_to "Refuser", decline_reservation_path(reservation), data: {turbo_method: :post, turbo_confirm: 'Êtes-vous sûr?'} %>
+      <%= link_to "Accept", accept_reservation_path(reservation), data: {turbo_method: :post, turbo_confirm: 'Êtes-vous sûr?'} %>
+      <%= link_to "Refuse", decline_reservation_path(reservation), data: {turbo_method: :post, turbo_confirm: 'Êtes-vous sûr?'} %>
     <% else %>
       <p>You are not the owner</p>
     <% end %>

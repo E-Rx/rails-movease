@@ -30,19 +30,19 @@
 
           <%= cl_image_tag(@vehicule.user.avatar.key, class: "card-vehicule-user avatar-bordered") %>
         </div>
-        <p><%= @vehicule.price %>€/ jour</p>
+        <p><%= @vehicule.price %>$/ day</p>
       </div>
       <div class="btn btn-info">
 
           <%# if @reservation.status == false || @reservation.status.nil? %>
 
           <%= link_to 'reservation', new_vehicule_reservation_path(@vehicule) %>
-        <% else %>
-          <%= "booked" %>
-        <% end %>
+        <%# <% else %>
+          <%# <%= "booked" %>
+        <%# <% end %>
 
         <%= link_to user_messages_path(@vehicule.user) do %>
-          <button class="btn btn-info">Contacter le propriétaire</button>
+          <button class="btn btn-info">Contact the owner</button>
         <% end %>
       </div>
     </div>

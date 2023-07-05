@@ -1,77 +1,88 @@
 .navbar {
-  background-color: #FFFFFF;
-  border-bottom: solid 1px #E2DFDF;
-  border-top: solid 1px #E2DFDF;
-  padding: 10px;
-  display: flex;
-  // justify-content: space-around;
-  align-items: center;
-  position: sticky;
-  top:0;
-  z-index: 1;
-}
-.rocket {
-  font-size: 48px;
-  color: #002147;
-
-}
-.navbar-mooveas {
-  color: #002147;
-  font-family: 'Cherry Bomb One', cursive;
-  font-size: 48px;
-}
-.avatar img {
-  border-radius: 50px;
-  width: 70px;
-  height: 100%;
-}
-.custom-rounded {
-  border-radius: 50px;
-}
-
-.custom-rounded:hover {
-  border: 2px solid #002147;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-}
-.links a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: #333;
-}
-.links a:hover {
-  color: #555;
-}
-.menu-toggle {
-  display: none;
-}
-.menu-link {
-  cursor: pointer;
-  height: 35px;
-}
-.menu-toggle:checked ~ .dropdown-menu {
-  display: block;
-}
-.dropdown-menu {
-  display: none;
-}
-
-.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.logo {
+  margin-right: 10px;
+  padding: 8px;
+}
+
+.logo i {
+  font-size: 55px;
+  color: #0b1372;
+}
+
+.logo i:hover {
+  color: #e63904;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar-mooveas {
+  font-family: 'Fugaz One', cursive;
+  font-size: 48px;
+  color: #0b1372
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  position: relative;
+  cursor: pointer;
+  padding-right: 16px;
+}
+
+.user-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.user-avatar:hover img {
+  transform: scale(1.1);
+  border: 2px solid #0b1372;
 }
 
 .dropdown-menu {
-  display: none;
-  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
   padding: 10px;
+  display: none;
+  z-index: 999;
 }
 
 .dropdown-menu a {
   display: block;
-  margin-bottom: 10px;
+  padding: 5px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.profile-toggle:checked + .dropdown-menu {
+  display: block;
+}
+
+.login-signup-links {
+  margin-left: 10px;
 }
