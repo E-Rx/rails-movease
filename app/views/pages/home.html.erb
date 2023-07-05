@@ -1,57 +1,60 @@
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpapercave.com/wp/ZaHQ4Jf.jpg);">    <div class="container">
-      <h1>Unleash Your Heroic Ride!!</h1>
+
+  <div class="banner">
+    <div class="container">
+      <h1>Unleash Your Heroic Ride!</h1>
       <p>Rent the Legends. Ride the Adventure.</p>
-       <% if user_signed_in? %>
+        <% if user_signed_in? %>
           <%= link_to 'Add your vehicule', new_vehicule_path, class: "btn btn-flat" %>
-          <% else %>
-        <%= link_to 'Log in', user_session_path, class: "btn btn-flat" %>
-          <% end %>
+        <% else %>
+          <%= link_to 'Log in', user_session_path, class: "btn btn-flat" %>
+        <% end %>
     </div>
   </div>
 
-
   <div class="container-filter">
-<div class="filters flex">
-  <div class="textfilter">Filters</div>
-  <div class="filterlist flex">
-    <div class="filter flex">
-      <div class="iconfilter flex">
-        <i class="fa-solid fa-jet-fighter"></i>
+    <div class="filters flex">
+      <div class="textfilter">
+        Filters
       </div>
-        <%= link_to "Aerial", root_path(query: 'Aérien') %>
-    </div>
-    <div class="filter flex">
-      <div class="iconfilter flex">
-        <i class="fa-solid fa-car-side"></i>
+      <div class="filterlist flex">
+        <div class="filter flex">
+          <div class="iconfilter flex">
+            <i class="fa-solid fa-jet-fighter"></i>
+          </div>
+          <%= link_to "Aerial", root_path(query: 'Aérien') %>
+        </div>
+        <div class="filter flex">
+          <div class="iconfilter flex">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <%= link_to "Land", root_path(query: 'terrestre') %>
+        </div>
+      <div class="filter flex">
+        <div class="iconfilter flex">
+          <i class="fa-solid fa-anchor"></i>
+        </div>
+          <%= link_to "Maritime", root_path(query: 'maritime') %>
       </div>
-        <%= link_to "Land", root_path(query: 'terrestre') %>
-    </div>
-    <div class="filter flex">
-      <div class="iconfilter flex">
-        <i class="fa-solid fa-anchor"></i>
-      </div>
-        <%= link_to "Maritime", root_path(query: 'maritime') %>
-    </div>
-    <div class="filter flex">
+      <div class="filter flex">
         <div class="iconfilter flex">
           <i class="fa-regular fa-hand-spock"></i>
         </div>
-          <%= link_to "Multi-purpose", root_path(query: 'multi-tache') %>
+           <%= link_to "Multi-purpose", root_path(query: 'multi-tache') %>
+      </div>
+
+      <div class="search-bar">
+        <%= form_with url: root_path, method: :get, class: "d-flex search-bar" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find by name or category"
+            %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
-
-  </div class="search-bar">
-    <%= form_with url: root_path, method: :get, class: "d-flex search-bar" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find by name or category"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
   </div>
-</div>
 
-</div>
 <div class="custom-container">
 
   <div class="map"
