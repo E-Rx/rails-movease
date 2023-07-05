@@ -354,7 +354,8 @@ image_files_naruto = [
 
 voiture_naruto = Vehicule.new(
   name: 'Gamakichi',
-  description: "Prêt à devenir un ninja légendaire ? Louez mon partenaire, la grenouille géante Toad Gamakichi. En compagnie de Gamakichi, vous pourrez sauter d'arbre en arbre, utiliser des techniques de combat incroyables et vivre des aventures épiques. Soyez prêt à défendre votre village, à déjouer les plans des méchants et à manger des bols entiers de nouilles ramen. Attention aux pièges ninja et aux ennemis puissants !",
+  description:
+  'Ready to become a legendary ninja? Rent my partner, the giant toad Gamakichi. With Gamakichi by your side, you can jump from tree to tree, use incredible combat techniques, and embark on epic adventures. Be prepared to defend your village, thwart the villains plans, and devour whole bowls of ramen noodles. Watch out for ninja traps and powerful enemies!',
   price: '799',
   user_id: naruto.id,
   category: Category.find_by(name: 'Multi-purpose'),
