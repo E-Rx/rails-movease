@@ -9,51 +9,53 @@
           <%= link_to 'Log in', user_session_path, class: "btn btn-flat" %>
         <% end %>
     </div>
+
   </div>
+</div>
 
-  <div class="container-filter">
-    <div class="filters flex">
-      <div class="textfilter">
-        Filters
-      </div>
-      <div class="filterlist flex">
-        <div class="filter flex">
-          <div class="iconfilter flex">
-            <i class="fa-solid fa-jet-fighter"></i>
-          </div>
-          <%= link_to "Aerial", root_path(query: 'Aérien') %>
-        </div>
-        <div class="filter flex">
-          <div class="iconfilter flex">
-            <i class="fa-solid fa-car-side"></i>
-          </div>
-          <%= link_to "Land", root_path(query: 'terrestre') %>
-        </div>
+<div class="container-filter">
+  <div class="filters flex">
+    <div class="textfilter">
+      Filters
+    </div>
+    <div class="filterlist flex">
       <div class="filter flex">
         <div class="iconfilter flex">
-          <i class="fa-solid fa-anchor"></i>
+          <i class="fa-solid fa-jet-fighter"></i>
         </div>
-          <%= link_to "Maritime", root_path(query: 'maritime') %>
+        <%= link_to "Aerial", root_path(query: 'Aérien') %>
       </div>
       <div class="filter flex">
         <div class="iconfilter flex">
-          <i class="fa-regular fa-hand-spock"></i>
+          <i class="fa-solid fa-car-side"></i>
         </div>
-           <%= link_to "Multi-purpose", root_path(query: 'multi-tache') %>
+        <%= link_to "Land", root_path(query: 'terrestre') %>
       </div>
+    <div class="filter flex">
+      <div class="iconfilter flex">
+        <i class="fa-solid fa-anchor"></i>
+      </div>
+        <%= link_to "Maritime", root_path(query: 'maritime') %>
+    </div>
+    <div class="filter flex">
+      <div class="iconfilter flex">
+        <i class="fa-regular fa-hand-spock"></i>
+      </div>
+          <%= link_to "Multi-purpose", root_path(query: 'multi-tache') %>
+    </div>
 
-      <div class="search-bar">
-        <%= form_with url: root_path, method: :get, class: "d-flex search-bar" do %>
-          <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Find by name or category"
-            %>
-          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-        <% end %>
-      </div>
+    <div class="search-bar">
+      <%= form_with url: root_path, method: :get, class: "d-flex search-bar" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find by name or category"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
+</div>
 
 <div class="custom-container">
 

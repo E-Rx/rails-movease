@@ -21,7 +21,7 @@
             <p><%= vehicule.description.truncate(85) %></p>
           </div>
           <div class="price-category">
-            <h3><strong><%= vehicule.price %>$ / day    -    <%= vehicule.category.name %></h3></strong>
+            <h3><strong><%= vehicule.price %>$ / day    -   <em><%= vehicule.category.name %></em></h3></strong>
           </div>
       </div>
     <% end %>
