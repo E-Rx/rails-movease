@@ -1,12 +1,15 @@
-<div class="banner">
-  <div class="container">
-    <h1>Unleash Your Heroic Ride!</h1>
-    <p>Rent the Legends. Ride the Adventure.</p>
-      <% if user_signed_in? %>
-        <%= link_to 'Add your vehicule', new_vehicule_path, class: "btn btn-flat" %>
-      <% else %>
-        <%= link_to 'Log in', user_session_path, class: "btn btn-flat" %>
-      <% end %>
+
+  <div class="banner">
+    <div class="container">
+      <h1>Unleash Your Heroic Ride!</h1>
+      <p>Rent the Legends. Ride the Adventure.</p>
+        <% if user_signed_in? %>
+          <%= link_to 'Add your vehicule', new_vehicule_path, class: "btn btn-flat" %>
+        <% else %>
+          <%= link_to 'Log in', user_session_path, class: "btn btn-flat" %>
+        <% end %>
+    </div>
+
   </div>
 </div>
 
