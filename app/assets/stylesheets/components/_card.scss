@@ -1,13 +1,12 @@
 .card-vehicule {
-  border-radius: 16px;
+  border-radius: 8px;
   width: 280px;
 
-  height: 420px;
+  height: 448px;
   overflow: hidden;
-  background: rgb(91, 130, 208);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: white;
   transition: transform 0.5s ease-in-out;
-  color: white;
+  color: black;
 
   &:hover {
     transform: translateY(-5px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
@@ -22,6 +21,8 @@
   height: 250px;
   width: 100%;
   object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-vehicule h2 {
@@ -73,11 +74,12 @@
 }
 
 .price-category {
-  padding: 0px;
-  padding-top: 12px;
+  padding-top: 32px;
+  padding-left: 16px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+
+
 
   h3{
     font-size: 16px;
